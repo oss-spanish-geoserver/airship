@@ -35,6 +35,10 @@ export class BasicLegend {
   }
 
   private renderHeader() {
+    if (!this.heading && !this.description) {
+      return null;
+    }
+
     return <as-widget-header
               header={this.heading}
               subheader={this.description}
